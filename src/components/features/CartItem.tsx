@@ -21,7 +21,7 @@ const rows = [
   createData('Stainless Steel Water Bottle', 'Kitchen', 3, 90, 270),
   createData('T-shirt', 'Cloth', 1, 500, 1000)
 ];
-const Android12Switch = styled(Switch)(({ theme }) => ({
+const CustomSwitch = styled(Switch)(({ theme }) => ({
     padding: 8,
     '& .MuiSwitch-track': {
       borderRadius: 22 / 2,
@@ -101,7 +101,7 @@ export default function CartItem() {
               <TableCell align="right">{row.subTotal}</TableCell>
               <TableCell align="right"> 
         <FormControlLabel
-        control={<Android12Switch checked={rowSwitchStates[index]} />}
+        control={<CustomSwitch checked={rowSwitchStates[index]} />}
         label=""
         onChange={() => handleRowSwitchChange(index)}
       /></TableCell>
